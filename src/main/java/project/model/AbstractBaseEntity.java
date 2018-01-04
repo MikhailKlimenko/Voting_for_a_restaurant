@@ -1,19 +1,16 @@
 package project.model;
 
-import java.util.Objects;
-
 public abstract class AbstractBaseEntity {
-
     protected Integer id;
 
-    protected AbstractBaseEntity() {
+    public AbstractBaseEntity() {
     }
 
-    protected AbstractBaseEntity(Integer id) {
+    public AbstractBaseEntity(Integer id) {
         this.id = id;
     }
 
-    protected Integer getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -27,19 +24,8 @@ public abstract class AbstractBaseEntity {
 
     @Override
     public String toString() {
-        return String.format("Entity %s (%s)", getClass().getName(), id);
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        AbstractBaseEntity that = (AbstractBaseEntity) o;
-        return Objects.equals(id, that.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return id == null ? 0 : id;
+        return "AbstractBaseEntity{" +
+                "id=" + id +
+                '}';
     }
 }

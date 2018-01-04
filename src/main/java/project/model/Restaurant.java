@@ -1,40 +1,14 @@
 package project.model;
 
-public class Restaurant extends AbstractNamedEntity {
+public class Restaurant{
 
-    private boolean enabledRestaurant = false;
+    public Restaurant() {}
 
-    private Integer amount;
+    public Restaurant(Restaurant r) {    }
 
-    public Restaurant(Integer id, String name, boolean enabledRestaurant) {
-        super(id, name);
-        this.enabledRestaurant = enabledRestaurant;
-    }
-
-    public boolean isEnabledRestaurant() {
-        return enabledRestaurant;
-    }
-
-    public void setEnabledRestaurant(boolean enabledRestaurant) {
-        this.enabledRestaurant = enabledRestaurant;
-    }
-
-    public Integer getAmount() {
-        return amount;
-    }
-
-    public void setAmount(Integer amount) {
-        this.amount = amount;
-    }
 
     @Override
     public String toString() {
-        return "Restaurant{" +
-                " id = " + id +
-                " name = " + name +
-                " enabled = " +
-                enabledRestaurant +
-                " amount = " + amount +
-                '}';
+        return null;
     }
 }
