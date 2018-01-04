@@ -1,15 +1,15 @@
 package project.repository.menu;
 
-import project.model.Menu;
+import project.model.LunchMenu;
 
 import java.util.List;
 
 public interface CrudMenuRepository {
 
-    Menu save(Menu menu, int userId);
+    LunchMenu save(LunchMenu lunchMenu, int userId);
 
     boolean delete(int id, int userId);
 
-    List<Menu> getAll(int userId);
+    List<LunchMenu> getAll(int userId);
 
 }

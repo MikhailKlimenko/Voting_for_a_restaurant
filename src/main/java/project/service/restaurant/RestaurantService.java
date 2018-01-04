@@ -1,6 +1,5 @@
 package project.service.restaurant;
 
-import project.model.Menu;
 import project.model.Restaurant;
 
 import java.util.List;

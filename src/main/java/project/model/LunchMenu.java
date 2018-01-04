@@ -1,12 +1,12 @@
 package project.model;
 
-public class Menu extends AbstractNamedEntity {
+public class LunchMenu extends AbstractNamedEntity {
 
     private long price;
 
-    public Menu() { }
+    public LunchMenu() { }
 
-    public Menu(Integer id, String name, long price) {
+    public LunchMenu(Integer id, String name, long price) {
         super(id, name);
         this.price = price;
     }
@@ -21,6 +21,9 @@ public class Menu extends AbstractNamedEntity {
 
     @Override
     public String toString() {
-        return "menu{" + " id = " + id + ", name = " + name + ", price = " + price + " }";
+        return "menu {" + " id = "
+                + id + ", name = "
+                + name + ", price = "
+                + price + " }";
     }
 }

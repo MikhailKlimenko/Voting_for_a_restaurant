@@ -1,18 +1,18 @@
 package project.service.menu;
 
-import project.model.Menu;
+import project.model.LunchMenu;
 
 import java.util.List;
 
 public interface MenuService {
 
-    Menu update(Menu menu, int userId);
+    LunchMenu update(LunchMenu lunchMenu, int userId);
 
-    Menu create(Menu menu, int userId);
+    LunchMenu create(LunchMenu lunchMenu, int userId);
 
     boolean delete(int id, int userId);
 
-    List<Menu> getAll(int userId);
+    List<LunchMenu> getAll(int userId);
 
-    List<Menu> getAll();
+    List<LunchMenu> getAll();
 }

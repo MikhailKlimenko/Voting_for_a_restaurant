@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>Voting_System</groupId>
@@ -9,7 +11,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>Voting</name>
+    <name>Voting_for_a_restaurant</name>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -24,9 +26,8 @@
         <slf4j.version>1.7.25</slf4j.version>
 
         <!--DB-->
-        <postgresql.version>42.1.4</postgresql.version>
-        <!--    Tests  -->
-        <junit.version>4.12</junit.version>
+
+
 
         <!-- Hibernate -->
         <hibernate.version>5.2.12.Final</hibernate.version>
@@ -128,17 +129,7 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>javax.cache</groupId>
-            <artifactId>cache-api</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.ehcache</groupId>
-            <artifactId>ehcache</artifactId>
-            <scope>runtime</scope>
-            <version>${ehcache.version}</version>
-        </dependency>
+
 
         <!--Web-->
         <dependency>
@@ -155,58 +146,18 @@
             <version>1.2</version>
         </dependency>
 
-        <!--Test-->
+
+        <!-- db  -->
+        <!-- https://mvnrepository.com/artifact/org.hsqldb/hsqldb -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.4.0</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>3.8.0</version>
-            <scope>test</scope>
-        </dependency>
+
 
     </dependencies>
-
-    <profiles>
-        <profile>
-            <id>hsqldb</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.hsqldb</groupId>
-                    <artifactId>hsqldb</artifactId>
-                    <version>2.3.4</version>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>postgres</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.postgresql</groupId>
-                    <artifactId>postgresql</artifactId>
-                    <version>${postgresql.version}</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.apache.tomcat</groupId>
-                    <artifactId>tomcat-jdbc</artifactId>
-                    <version>${tomcat.version}</version>
-                    <scope>provided</scope>
-                </dependency>
-            </dependencies>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-    </profiles>
 
     <dependencyManagement>
         <dependencies>

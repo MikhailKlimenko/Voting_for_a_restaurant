@@ -1,18 +1,18 @@
 package project.service.menu;
 
-import project.model.Menu;
+import project.model.LunchMenu;
 
 import java.util.List;
 
 public class MenuServiceImpl implements MenuService {
 
     @Override
-    public Menu update(Menu menu, int userId) {
+    public LunchMenu update(LunchMenu lunchMenu, int userId) {
         return null;
     }
 
     @Override
-    public Menu create(Menu menu, int userId) {
+    public LunchMenu create(LunchMenu lunchMenu, int userId) {
         return null;
     }
 
@@ -22,12 +22,12 @@ public class MenuServiceImpl implements MenuService {
     }
 
     @Override
-    public List<Menu> getAll(int userId) {
+    public List<LunchMenu> getAll(int userId) {
         return null;
     }
 
     @Override
-    public List<Menu> getAll() {
+    public List<LunchMenu> getAll() {
         return null;
     }
 }

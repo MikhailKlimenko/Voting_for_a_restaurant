@@ -1,11 +1,10 @@
 package project.repository.user;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import project.model.User;
 
 import java.util.List;
 
-public interface CrudUserRepository extends JpaRepository<User, Integer> {
+public interface UserRepository{
 
     User save(User user);
 

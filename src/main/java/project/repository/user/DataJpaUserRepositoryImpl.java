@@ -4,7 +4,8 @@ import project.model.User;
 
 import java.util.List;
 
-public class DataJpaUserRepositoryImpl implements CrudUserRepository {
+public class DataJpaUserRepositoryImpl implements UserRepository {
+
     @Override
     public User save(User user) {
         return null;

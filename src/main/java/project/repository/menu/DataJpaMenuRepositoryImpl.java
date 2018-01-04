@@ -1,13 +1,13 @@
 package project.repository.menu;
 
-import project.model.Menu;
+import project.model.LunchMenu;
 
 import java.util.List;
 
 public class DataJpaMenuRepositoryImpl implements CrudMenuRepository {
 
     @Override
-    public Menu save(Menu menu, int userId) {
+    public LunchMenu save(LunchMenu lunchMenu, int userId) {
         return null;
     }
 
@@ -17,7 +17,7 @@ public class DataJpaMenuRepositoryImpl implements CrudMenuRepository {
     }
 
     @Override
-    public List<Menu> getAll(int userId) {
+    public List<LunchMenu> getAll(int userId) {
         return null;
     }
 }
