@@ -1,22 +1,31 @@
 package project.model;
 
-import java.util.Date;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
+@Entity
+@Table(name="lunch_menu")
 public class LunchMenu extends AbstractBaseEntity {
 
+    @Column(name = "description")
+    @NotBlank
     private String description;
 
-    private Integer price;
+    @Column(name = "price")
+    @NotBlank
+    private Double price;
 
-    private Date registered = new Date();
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "restaurant_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Restaurant restaurant;
 
     public LunchMenu() {}
 
-    public LunchMenu(String description, Integer price) {
-        this(null, description, price);
-    }
-
-    public LunchMenu(Integer id, String description, Integer price) {
+    public LunchMenu(Integer id, String description, Double price) {
         super(id);
         this.description = description;
         this.price = price;
@@ -30,20 +39,20 @@ public class LunchMenu extends AbstractBaseEntity {
         this.description = description;
     }
 
-    public Integer getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
-    public Date getRegistered() {
-        return registered;
+    public Restaurant getRestaurant() {
+        return restaurant;
     }
 
-    public void setRegistered(Date registered) {
-        this.registered = registered;
+    public void setRestaurant(Restaurant restaurant) {
+        this.restaurant = restaurant;
     }
 
     @Override
@@ -51,8 +60,8 @@ public class LunchMenu extends AbstractBaseEntity {
         return "LunchMenu{" +
                 "description='" + description + '\'' +
                 ", price=" + price +
-                ", registered=" + registered +
                 ", id=" + id +
                 '}';
     }
+
 }

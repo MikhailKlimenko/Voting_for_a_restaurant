@@ -1,47 +1,66 @@
 package project.model;
 
 
+import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.EnumSet;
 import java.util.Set;
 
-public class User extends AbstractBaseEntity {
 
-    private String name;
+@Entity
+@Table(name = "users", uniqueConstraints = @UniqueConstraint(columnNames = "email", name = "user_unique_email_idx"))
+public class User extends AbstractNamedEntity {
 
+    @Column(name = "email", nullable = false, unique = true)
+    @Email
+    @NotBlank
+    @Size(max = 200)
     private String email;
 
+    @Column(name = "password", nullable = false)
+    @NotBlank
+    @Size(min = 5, max = 64)
     private String password;
 
+    @Column(name = "enabled", nullable = false, columnDefinition = "bool default true")
+    @NotNull
     private boolean enabled = true;
 
+    @Column(name = "registered", columnDefinition = "timestamp default now()")
+    @NotNull
     private Date registered = new Date();
 
+    @Enumerated(EnumType.STRING)
+    @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
+    @Column(name = "role")
+    @ElementCollection(fetch = FetchType.EAGER)
     private Set<Role> roles;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "restaurant_id")
     private Restaurant vote;
 
     public User() {
     }
 
     public User(Integer id, String name, String email, String password, Role role, Role... roles) {
-        this(id, name, email, password,  true, EnumSet.of(role, roles));
+        this(id, name, email, password, true, EnumSet.of(role, roles));
     }
 
     public User(Integer id, String name, String email, String password, boolean enabled, Set<Role> roles) {
-        super(id);
+        super(id, name);
         this.email = email;
         this.password = password;
         this.enabled = enabled;
         this.roles = roles;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public User(User u) {
+        this(u.getId(), u.getName(), u.getEmail(), u.getPassword(), u.enabled, u.getRoles());
     }
 
     public String getEmail() {

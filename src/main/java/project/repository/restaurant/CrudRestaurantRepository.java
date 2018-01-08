@@ -1,4 +1,4 @@
-package project.repository;
+package project.repository.restaurant;
 
 import project.model.Restaurant;
 

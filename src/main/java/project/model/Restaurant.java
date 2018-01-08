@@ -1,47 +1,55 @@
 package project.model;
 
-public class Restaurant extends AbstractBaseEntity{
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
-    private String name;
-    private Integer count;
+@SuppressWarnings("JpaQlInspection")
+@Entity
+@Table(name = "restaurant")
+public class Restaurant extends AbstractNamedEntity {
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "restaurant")
+    protected List<LunchMenu> menuList;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "vote")
+    private Set<User> votes;
 
     public Restaurant() {
     }
 
-    public Restaurant(String name) {
-        this(null, name);
-    }
-
     public Restaurant(Integer id, String name) {
-        super(id);
-        this.name = name;
+        super(id, name);
+        menuList = new ArrayList<>();
+        votes = new HashSet<>();
     }
 
-    public String getName() {
-        return name;
+    public List<LunchMenu> getMenuList() {
+        return menuList;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setMenuList(List<LunchMenu> menuList) {
+        this.menuList = menuList;
     }
 
-    public Integer getCount() {
-        return count;
+    public Set<User> getVotes() {
+        return votes;
     }
 
-    public void setCount(Integer count) {
-        this.count = count;
+    public void setVotes(Set<User> votes) {
+        this.votes = votes;
     }
-
-
 
     @Override
     public String toString() {
-        return "Restaurant{" +
-                "name='" + name + '\'' +
-                ", count=" + count +
-                ", id=" + id +
-                '}';
+        return "Restaurant{ " +
+                "id= " + id +
+                " ,name " + name +
+                "}";
     }
-
 }

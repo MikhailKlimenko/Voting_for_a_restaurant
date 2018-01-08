@@ -1,6 +1,7 @@
 package project.repository.user;
 
 import project.model.User;
+import project.repository.UserRepository;
 
 import java.util.List;
 
