@@ -1,4 +1,4 @@
-package project.repository.menu;
+package project.repository;
 
 import project.model.LunchMenu;
 

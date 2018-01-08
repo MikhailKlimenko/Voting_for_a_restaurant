@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class LunchMenu extends AbstractBaseEntity {
 
-    private String name;
+    private String description;
 
     private Integer price;
 
@@ -12,22 +12,22 @@ public class LunchMenu extends AbstractBaseEntity {
 
     public LunchMenu() {}
 
-    public LunchMenu(String name, Integer price) {
-        this(null, name, price);
+    public LunchMenu(String description, Integer price) {
+        this(null, description, price);
     }
 
-    public LunchMenu(Integer id, String name, Integer price) {
+    public LunchMenu(Integer id, String description, Integer price) {
         super(id);
-        this.name = name;
+        this.description = description;
         this.price = price;
     }
 
-    public String getName() {
-        return name;
+    public String getDescription() {
+        return description;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Integer getPrice() {
@@ -49,7 +49,7 @@ public class LunchMenu extends AbstractBaseEntity {
     @Override
     public String toString() {
         return "LunchMenu{" +
-                "name='" + name + '\'' +
+                "description='" + description + '\'' +
                 ", price=" + price +
                 ", registered=" + registered +
                 ", id=" + id +

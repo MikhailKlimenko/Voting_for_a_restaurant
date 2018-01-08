@@ -33,12 +33,14 @@ public class Restaurant extends AbstractBaseEntity{
         this.count = count;
     }
 
+
+
     @Override
     public String toString() {
         return "Restaurant{" +
-                "id=" + id +
                 "name='" + name + '\'' +
                 ", count=" + count +
+                ", id=" + id +
                 '}';
     }
 

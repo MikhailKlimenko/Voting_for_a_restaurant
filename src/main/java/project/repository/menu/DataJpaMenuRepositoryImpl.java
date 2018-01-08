@@ -1,6 +1,7 @@
 package project.repository.menu;
 
 import project.model.LunchMenu;
+import project.repository.CrudMenuRepository;
 
 import java.util.List;
 

@@ -19,6 +19,8 @@ public class User extends AbstractBaseEntity {
 
     private Set<Role> roles;
 
+    private Restaurant vote;
+
     public User() {
     }
 
@@ -80,6 +82,14 @@ public class User extends AbstractBaseEntity {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public Restaurant getVote() {
+        return vote;
+    }
+
+    public void setVote(Restaurant vote) {
+        this.vote = vote;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package project.repository.restaurant;
 
 import project.model.Restaurant;
+import project.repository.CrudRestaurantRepository;
 
 import java.util.List;
 
