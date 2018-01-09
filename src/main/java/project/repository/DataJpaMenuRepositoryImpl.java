@@ -3,6 +3,7 @@ package project.repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import project.model.LunchMenu;
+import project.model.User;
 
 import java.util.List;
 
@@ -15,8 +16,12 @@ public class DataJpaMenuRepositoryImpl implements LunchMenuRepository {
     @Autowired
     private CrudRestaurantRepository crudRestaurantRepository;
 
+    @Autowired
+    private CrudUserRepository crudUserRepository;
+
     @Override
     public LunchMenu save(LunchMenu lunchMenu, int restaurantId) {
+        User user = crudUserRepository.get(restaurantId);
         lunchMenu.setRestaurant(crudRestaurantRepository.getOne(restaurantId));
         return crudMenuRepository.save(lunchMenu);
     }
