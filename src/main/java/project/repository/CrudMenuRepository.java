@@ -9,7 +9,7 @@ public interface CrudMenuRepository extends JpaRepository<LunchMenu, Integer> {
 
     LunchMenu save(LunchMenu lunchMenu);
 
-    boolean delete(int id, int userId);
+    boolean delete(int id);
 
     List<LunchMenu> getAll(int userId);
 

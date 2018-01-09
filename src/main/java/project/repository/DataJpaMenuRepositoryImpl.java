@@ -22,8 +22,8 @@ public class DataJpaMenuRepositoryImpl implements LunchMenuRepository {
     }
 
     @Override
-    public boolean id(int id) {
-        return false;
+    public boolean delete(int id) {
+        return crudMenuRepository.delete(id);
     }
 
     @Override
