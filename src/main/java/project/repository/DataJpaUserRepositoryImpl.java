@@ -1,4 +1,4 @@
-package project.repository.user;
+package project.repository;
 
 import project.model.User;
 import project.repository.UserRepository;
