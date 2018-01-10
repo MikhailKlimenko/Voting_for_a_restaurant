@@ -15,7 +15,7 @@ import java.util.Set;
 public class Restaurant extends AbstractNamedEntity {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "restaurant")
-    protected List<LunchMenu> menuList;
+    protected List<Menu> menuList;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "vote")
     private Set<User> votes;
@@ -29,11 +29,11 @@ public class Restaurant extends AbstractNamedEntity {
         votes = new HashSet<>();
     }
 
-    public List<LunchMenu> getMenuList() {
+    public List<Menu> getMenuList() {
         return menuList;
     }
 
-    public void setMenuList(List<LunchMenu> menuList) {
+    public void setMenuList(List<Menu> menuList) {
         this.menuList = menuList;
     }
 

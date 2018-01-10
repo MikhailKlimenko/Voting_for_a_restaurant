@@ -8,7 +8,7 @@ import javax.validation.constraints.*;
 
 @Entity
 @Table(name="lunch_menu")
-public class LunchMenu extends AbstractBaseEntity {
+public class Menu extends AbstractBaseEntity {
 
     @Column(name = "description")
     @NotBlank
@@ -23,9 +23,9 @@ public class LunchMenu extends AbstractBaseEntity {
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Restaurant restaurant;
 
-    public LunchMenu() {}
+    public Menu() {}
 
-    public LunchMenu(Integer id, String description, Double price) {
+    public Menu(Integer id, String description, Double price) {
         super(id);
         this.description = description;
         this.price = price;
@@ -57,7 +57,7 @@ public class LunchMenu extends AbstractBaseEntity {
 
     @Override
     public String toString() {
-        return "LunchMenu{" +
+        return "MenuRepository{" +
                 "description='" + description + '\'' +
                 ", price=" + price +
                 ", id=" + id +
