@@ -1,4 +1,4 @@
-package project.service.menu;
+package project.service;
 
 import project.model.Menu;
 

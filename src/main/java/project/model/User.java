@@ -8,6 +8,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.EnumSet;
+import java.util.List;
 import java.util.Set;
 
 
@@ -40,9 +41,8 @@ public class User extends AbstractNamedEntity {
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<Role> roles;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "restaurant_id")
-    private Restaurant vote;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    private List<UserVotes> userVotesList;
 
     public User() {
     }
@@ -103,12 +103,12 @@ public class User extends AbstractNamedEntity {
         this.roles = roles;
     }
 
-    public Restaurant getVote() {
-        return vote;
+    public List<UserVotes> getUserVotesList() {
+        return userVotesList;
     }
 
-    public void setVote(Restaurant vote) {
-        this.vote = vote;
+    public void setUserVotesList(List<UserVotes> userVotesList) {
+        this.userVotesList = userVotesList;
     }
 
     @Override

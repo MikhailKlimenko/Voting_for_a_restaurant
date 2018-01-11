@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface UserRepository{
 
-    User save(User user);
+    User save(User user, int restaurantId);
 
     boolean delete(int id);
 

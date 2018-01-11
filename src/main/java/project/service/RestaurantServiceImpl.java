@@ -1,4 +1,4 @@
-package project.service.restaurant;
+package project.service;
 
 import project.model.Restaurant;
 

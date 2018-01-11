@@ -13,8 +13,14 @@ public class DataJpaUserRepositoryImpl implements UserRepository {
     @Autowired
     private CrudUserRepository crudUserRepository;
 
+    @Autowired
+    private CrudRestaurantRepository crudRestaurantRepository;
+
     @Override
-    public User save(User user) {
+    public User save(User user, int restaurantId) {
+        if (!user.isNew()) {
+            user.setVote(crudRestaurantRepository.getOne(restaurantId));
+        }
         return crudUserRepository.save(user);
     }
 
