@@ -8,8 +8,8 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 @Entity
-@Table(name = "user")
-public class UserVotes{
+@Table
+public class Votes {
 
     @Id
     private BigInteger id;
@@ -27,14 +27,14 @@ public class UserVotes{
     @NotNull
     private Restaurant restaurant;
 
-    public UserVotes() {
+    public Votes() {
     }
 
-    public UserVotes(LocalDateTime dateTime, Restaurant restaurant) {
+    public Votes(LocalDateTime dateTime, Restaurant restaurant) {
         this(null, dateTime, restaurant);
     }
 
-    public UserVotes(BigInteger id, LocalDateTime dateTime,Restaurant restaurant) {
+    public Votes(BigInteger id, LocalDateTime dateTime, Restaurant restaurant) {
         this.id = id;
         this.localDateTime = dateTime;
         this.restaurant = restaurant;
@@ -84,11 +84,9 @@ public class UserVotes{
 
     @Override
     public String toString() {
-        return "UserVotes{" +
+        return "Votes{" +
                 "id=" + id +
                 ", localDateTime=" + localDateTime +
-                ", user=" + user +
-                ", restaurant=" + restaurant +
                 '}';
     }
 }

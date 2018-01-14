@@ -12,21 +12,27 @@ import java.util.Set;
 @SuppressWarnings("JpaQlInspection")
 @Entity
 @Table(name = "restaurant")
-public class Restaurant extends AbstractNamedEntity {
+public class Restaurant extends AbstractBaseEntity {
 
+    private String description;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "restaurant")
     protected List<Menu> menuList;
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "vote")
-    private Set<User> votes;
 
     public Restaurant() {
     }
 
-    public Restaurant(Integer id, String name) {
-        super(id, name);
+    public Restaurant(Integer id, String description) {
+        super(id);
+        this.description = description;
         menuList = new ArrayList<>();
-        votes = new HashSet<>();
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public List<Menu> getMenuList() {
@@ -37,19 +43,12 @@ public class Restaurant extends AbstractNamedEntity {
         this.menuList = menuList;
     }
 
-    public Set<User> getVotes() {
-        return votes;
-    }
-
-    public void setVotes(Set<User> votes) {
-        this.votes = votes;
-    }
 
     @Override
     public String toString() {
         return "Restaurant{ " +
-                "id= " + id +
-                " ,name " + name +
-                "}";
+                " id = " + id +
+                " ,description " + description +
+                " }";
     }
 }

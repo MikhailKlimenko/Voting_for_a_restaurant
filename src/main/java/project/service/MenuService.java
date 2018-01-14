@@ -10,9 +10,11 @@ public interface MenuService {
 
     Menu create(Menu menu, int userId);
 
-    boolean delete(int id, int userId);
+    boolean delete(int id);
 
-    List<Menu> getAll(int userId);
+    Menu get(int id);
 
     List<Menu> getAll();
+
+    List<Menu> getAllForRestaurant(int restaurantId);
 }

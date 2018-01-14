@@ -2,9 +2,11 @@ package project.model;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+
 
 @Entity
 @Table(name="lunch_menu")
@@ -57,11 +59,11 @@ public class Menu extends AbstractBaseEntity {
 
     @Override
     public String toString() {
-        return "MenuRepository{" +
-                "description='" + description + '\'' +
-                ", price=" + price +
-                ", id=" + id +
-                '}';
+        return "MenuRepository { " +
+                " description = '" + description + '\'' +
+                ", price = " + price +
+                ", id = " + id +
+                " }";
     }
 
 }

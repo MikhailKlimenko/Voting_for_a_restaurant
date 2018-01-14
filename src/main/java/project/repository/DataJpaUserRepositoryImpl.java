@@ -1,9 +1,8 @@
-package project.repository.datajpa;
+package project.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import project.model.User;
-import project.repository.UserRepository;
 
 import java.util.List;
 
@@ -17,10 +16,7 @@ public class DataJpaUserRepositoryImpl implements UserRepository {
     private CrudRestaurantRepository crudRestaurantRepository;
 
     @Override
-    public User save(User user, int restaurantId) {
-        if (!user.isNew()) {
-            user.setVote(crudRestaurantRepository.getOne(restaurantId));
-        }
+    public User save(User user) {
         return crudUserRepository.save(user);
     }
 

@@ -1,9 +1,8 @@
-package project.repository.datajpa;
+package project.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import project.model.Restaurant;
-import project.repository.RestaurantRepository;
 
 import java.util.List;
 
@@ -21,7 +20,7 @@ public class DataJpaRestaurantRepositoryImpl implements RestaurantRepository {
 
     @Override
     public boolean delete(int id) {
-        return crudRestaurantRepository.delete(id) != null;
+        return crudRestaurantRepository.delete(id) != 0;
     }
 
     @Override

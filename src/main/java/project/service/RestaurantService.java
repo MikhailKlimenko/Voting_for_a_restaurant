@@ -7,13 +7,11 @@ import java.util.List;
 
 public interface RestaurantService {
 
-    Restaurant update(Restaurant restaurant, int userId);
+    Restaurant update(Restaurant restaurant);
 
-    Restaurant create(Restaurant restaurant, int userId);
+    Restaurant create(Restaurant restaurant);
 
-    boolean delete(int id, int userId) throws NotFoundException;
-
-    List<Restaurant> getAll(int userId) throws NotFoundException;
+    boolean delete(int id) throws NotFoundException;
 
     List<Restaurant> getAll() throws NotFoundException;
 }

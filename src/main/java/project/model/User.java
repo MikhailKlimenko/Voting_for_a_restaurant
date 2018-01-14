@@ -42,7 +42,7 @@ public class User extends AbstractNamedEntity {
     private Set<Role> roles;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
-    private List<UserVotes> userVotesList;
+    private List<Votes> votesList;
 
     public User() {
     }
@@ -103,25 +103,25 @@ public class User extends AbstractNamedEntity {
         this.roles = roles;
     }
 
-    public List<UserVotes> getUserVotesList() {
-        return userVotesList;
+    public List<Votes> getVotesList() {
+        return votesList;
     }
 
-    public void setUserVotesList(List<UserVotes> userVotesList) {
-        this.userVotesList = userVotesList;
+    public void setVotesList(List<Votes> votesList) {
+        this.votesList = votesList;
     }
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                "name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", enabled=" + enabled +
-                ", registered=" + registered +
-                ", roles=" + roles +
-                '}';
+        return " User {" +
+                "id = " + id +
+                ", name = '" + name + '\'' +
+                ", email = '" + email + '\'' +
+                ", password = '" + password + '\'' +
+                ", enabled = " + enabled +
+                ", registered = " + registered +
+                ", roles = " + roles +
+                "}";
     }
 
 }

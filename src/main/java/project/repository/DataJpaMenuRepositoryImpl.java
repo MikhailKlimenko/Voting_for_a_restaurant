@@ -1,9 +1,8 @@
-package project.repository.datajpa;
+package project.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import project.model.Menu;
-import project.repository.MenuRepository;
 
 import java.util.List;
 
@@ -24,7 +23,7 @@ public class DataJpaMenuRepositoryImpl implements MenuRepository {
 
     @Override
     public boolean delete(int id) {
-        return crudMenuRepository.delete(id);
+        return crudMenuRepository.delete(id) != 0;
     }
 
     @Override
@@ -39,6 +38,7 @@ public class DataJpaMenuRepositoryImpl implements MenuRepository {
 
     @Override
     public List<Menu> getAllForRestaurant(int restaurantId) {
-        return crudMenuRepository.getAll(restaurantId);
+        return null;
     }
+
 }
