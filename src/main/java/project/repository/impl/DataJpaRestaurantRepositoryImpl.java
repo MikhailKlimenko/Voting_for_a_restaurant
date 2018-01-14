@@ -1,8 +1,10 @@
-package project.repository;
+package project.repository.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import project.model.Restaurant;
+import project.repository.RestaurantRepository;
+import project.repository.crud.CrudRestaurantRepository;
 
 import java.util.List;
 

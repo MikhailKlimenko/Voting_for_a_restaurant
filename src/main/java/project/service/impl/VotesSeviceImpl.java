@@ -1,9 +1,10 @@
-package project.service;
+package project.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import project.model.Votes;
 import project.repository.VotesRepository;
+import project.service.VotesService;
 import project.util.exception.NotFoundException;
 
 import java.util.List;

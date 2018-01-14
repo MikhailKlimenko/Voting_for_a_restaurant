@@ -15,8 +15,7 @@ import java.util.Set;
 public class Restaurant extends AbstractBaseEntity {
 
     private String description;
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "restaurant")
-    protected List<Menu> menuList;
+
 
     public Restaurant() {
     }
@@ -24,7 +23,6 @@ public class Restaurant extends AbstractBaseEntity {
     public Restaurant(Integer id, String description) {
         super(id);
         this.description = description;
-        menuList = new ArrayList<>();
     }
 
     public String getDescription() {
@@ -33,14 +31,6 @@ public class Restaurant extends AbstractBaseEntity {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public List<Menu> getMenuList() {
-        return menuList;
-    }
-
-    public void setMenuList(List<Menu> menuList) {
-        this.menuList = menuList;
     }
 
 

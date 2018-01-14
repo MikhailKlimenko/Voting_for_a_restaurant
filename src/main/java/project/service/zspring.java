@@ -9,7 +9,7 @@ import project.model.Votes;
 
 import java.util.List;
 
-public class spring {
+public class zspring {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring/spring-app.xml");
         ctx.refresh();

@@ -1,8 +1,12 @@
-package project.repository;
+package project.repository.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import project.model.Votes;
+import project.repository.VotesRepository;
+import project.repository.crud.CrudRestaurantRepository;
+import project.repository.crud.CrudUserRepository;
+import project.repository.crud.CrudVotesRepository;
 
 import java.util.List;
 

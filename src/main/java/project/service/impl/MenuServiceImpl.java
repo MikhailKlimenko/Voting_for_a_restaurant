@@ -1,9 +1,11 @@
-package project.service;
+package project.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import project.model.Menu;
 import project.repository.MenuRepository;
+import project.service.MenuService;
+import project.util.exception.NotFoundException;
 
 import java.util.List;
 
@@ -18,7 +20,7 @@ public class MenuServiceImpl implements MenuService {
     }
 
     @Override
-    public Menu update(Menu menu, int userId) {
+    public Menu update(Menu menu, int userId) throws NotFoundException {
         return null;
     }
 
@@ -28,8 +30,8 @@ public class MenuServiceImpl implements MenuService {
     }
 
     @Override
-    public boolean delete(int id) {
-        return false;
+    public void delete(int id) throws NotFoundException {
+
     }
 
     @Override
@@ -38,7 +40,7 @@ public class MenuServiceImpl implements MenuService {
     }
 
     @Override
-    public Menu get(int id) {
+    public Menu get(int id) throws NotFoundException {
         return null;
     }
 

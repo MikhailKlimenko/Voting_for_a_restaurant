@@ -1,20 +1,20 @@
-package project.repository;
+package project.repository.crud;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
-import project.model.Restaurant;
 import project.model.Votes;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface CrudRestaurantRepository extends JpaRepository<Restaurant, Integer> {
+@Transactional(readOnly = true)
+public interface CrudVotesRepository extends JpaRepository<Votes, Integer> {
 
     @Transactional
-    Restaurant save(Restaurant r);
+    Votes save(Votes vote);
 
     @Transactional
     @Modifying
@@ -22,14 +22,11 @@ public interface CrudRestaurantRepository extends JpaRepository<Restaurant, Inte
     int delete(@Param("id")int id);
 
     @Override
-    Optional<Restaurant> findById(Integer id);
+    Optional<Votes> findById(Integer integer);
 
 
-//    Restaurant save(Restaurant r);
-//
-//    boolean delete(int id);
-//
-//    Restaurant get(int id);
-//
-//    List<Restaurant> getAll();
+    @Modifying
+    @Query("SELECT v FROM Votes v WHERE v.restaurant.id=:resraurantId")
+    List<Votes> getAllForRestaurant(int restaurantId);
+
 }

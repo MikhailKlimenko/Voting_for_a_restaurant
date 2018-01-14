@@ -1,9 +1,10 @@
-package project.service;
+package project.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import project.model.User;
 import project.repository.UserRepository;
+import project.service.UserService;
 import project.util.exception.NotFoundException;
 
 import java.util.List;
@@ -30,12 +31,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User get(int id) {
+    public User get(int id) throws NotFoundException {
         return userRepository.get(id);
     }
 
     @Override
-    public User getByEmail(String email) {
+    public User getByEmail(String email) throws NotFoundException {
         return userRepository.getByEmail(email);
     }
 

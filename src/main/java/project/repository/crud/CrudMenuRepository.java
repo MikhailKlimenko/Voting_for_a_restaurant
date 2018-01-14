@@ -1,4 +1,4 @@
-package project.repository;
+package project.repository.crud;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -7,7 +7,6 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 import project.model.Menu;
 
-import java.util.List;
 import java.util.Optional;
 
 @Transactional(readOnly = true)
