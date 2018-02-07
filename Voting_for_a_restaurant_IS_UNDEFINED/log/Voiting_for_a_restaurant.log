@@ -1865,3 +1865,143 @@ PropertyAccessException 1: org.springframework.beans.MethodInvocationException: 
 2018-01-14 20:14:13,017 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/init_db_hsqldb.sql] in 19 ms.
 2018-01-14 20:14:13,017 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:442 - Executing SQL script from class path resource [db/populateDB.sql]
 2018-01-14 20:14:13,017 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/populateDB.sql] in 0 ms.
+2018-01-15 23:02:22,541 INFO  o.s.context.support.ClassPathXmlApplicationContext.prepareRefresh:589 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6093dd95: startup date [Mon Jan 15 23:02:22 MSK 2018]; root of context hierarchy
+2018-01-15 23:02:22,756 INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316 - Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2018-01-15 23:02:23,331 INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316 - Loading XML bean definitions from class path resource [spring/spring-db.xml]
+2018-01-15 23:02:26,076 INFO  o.s.jdbc.datasource.DriverManagerDataSource.setDriverClassName:133 - Loaded JDBC driver: org.hsqldb.jdbcDriver
+2018-01-15 23:02:26,645 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory:354 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-15 23:02:26,752 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-15 23:02:27,033 INFO  org.hibernate.Version.logVersion:45 - HHH000412: Hibernate Core {5.2.12.Final}
+2018-01-15 23:02:27,033 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-01-15 23:02:27,340 INFO  org.hibernate.annotations.common.Version.<clinit>:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-15 23:02:28,563 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-01-15 23:02:29,732 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.5.Final
+2018-01-15 23:02:30,276 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:389 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-15 23:02:31,449 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-01-15 23:02:31,971 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:442 - Executing SQL script from class path resource [db/init_db_hsqldb.sql]
+2018-01-15 23:02:31,986 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/init_db_hsqldb.sql] in 15 ms.
+2018-01-15 23:02:31,986 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:442 - Executing SQL script from class path resource [db/populateDB.sql]
+2018-01-15 23:02:32,033 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/populateDB.sql] in 47 ms.
+2018-01-15 23:02:32,196 INFO  o.s.context.support.ClassPathXmlApplicationContext.prepareRefresh:589 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6093dd95: startup date [Mon Jan 15 23:02:32 MSK 2018]; root of context hierarchy
+2018-01-15 23:02:32,212 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:565 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-15 23:02:32,212 INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316 - Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2018-01-15 23:02:32,259 INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316 - Loading XML bean definitions from class path resource [spring/spring-db.xml]
+2018-01-15 23:02:32,436 INFO  o.s.jdbc.datasource.DriverManagerDataSource.setDriverClassName:133 - Loaded JDBC driver: org.hsqldb.jdbcDriver
+2018-01-15 23:02:32,949 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory:354 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-15 23:02:32,949 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-15 23:02:32,980 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-01-15 23:02:33,033 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:389 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-15 23:02:33,144 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-01-15 23:02:33,263 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:442 - Executing SQL script from class path resource [db/init_db_hsqldb.sql]
+2018-01-15 23:02:33,264 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/init_db_hsqldb.sql] in 0 ms.
+2018-01-15 23:02:33,264 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:442 - Executing SQL script from class path resource [db/populateDB.sql]
+2018-01-15 23:02:33,280 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/populateDB.sql] in 16 ms.
+2018-01-21 16:25:58,073 INFO  o.s.context.support.ClassPathXmlApplicationContext.prepareRefresh:589 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6093dd95: startup date [Sun Jan 21 16:25:58 MSK 2018]; root of context hierarchy
+2018-01-21 16:25:58,319 INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316 - Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2018-01-21 16:25:59,170 INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316 - Loading XML bean definitions from class path resource [spring/spring-db.xml]
+2018-01-21 16:26:01,829 INFO  o.s.jdbc.datasource.DriverManagerDataSource.setDriverClassName:133 - Loaded JDBC driver: org.hsqldb.jdbcDriver
+2018-01-21 16:26:02,990 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory:354 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-21 16:26:03,106 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-21 16:26:03,372 INFO  org.hibernate.Version.logVersion:45 - HHH000412: Hibernate Core {5.2.12.Final}
+2018-01-21 16:26:03,372 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-01-21 16:26:03,831 INFO  org.hibernate.annotations.common.Version.<clinit>:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-21 16:26:05,130 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-01-21 16:26:06,376 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.5.Final
+2018-01-21 16:26:06,941 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:389 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-21 16:26:08,067 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-01-21 16:26:08,588 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:442 - Executing SQL script from class path resource [db/init_db_hsqldb.sql]
+2018-01-21 16:26:08,620 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/init_db_hsqldb.sql] in 32 ms.
+2018-01-21 16:26:08,620 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:442 - Executing SQL script from class path resource [db/populateDB.sql]
+2018-01-21 16:26:08,667 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/populateDB.sql] in 47 ms.
+2018-01-21 16:26:08,782 INFO  o.s.context.support.ClassPathXmlApplicationContext.prepareRefresh:589 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6093dd95: startup date [Sun Jan 21 16:26:08 MSK 2018]; root of context hierarchy
+2018-01-21 16:26:08,782 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:565 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-21 16:26:08,782 INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316 - Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2018-01-21 16:26:08,813 INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316 - Loading XML bean definitions from class path resource [spring/spring-db.xml]
+2018-01-21 16:26:09,003 INFO  o.s.jdbc.datasource.DriverManagerDataSource.setDriverClassName:133 - Loaded JDBC driver: org.hsqldb.jdbcDriver
+2018-01-21 16:26:09,585 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory:354 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-21 16:26:09,585 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-21 16:26:09,616 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-01-21 16:26:09,679 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:389 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-21 16:26:09,781 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-01-21 16:26:10,051 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:442 - Executing SQL script from class path resource [db/init_db_hsqldb.sql]
+2018-01-21 16:26:10,085 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/init_db_hsqldb.sql] in 33 ms.
+2018-01-21 16:26:10,086 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:442 - Executing SQL script from class path resource [db/populateDB.sql]
+2018-01-21 16:26:10,088 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/populateDB.sql] in 2 ms.
+2018-02-06 00:32:20,744 INFO  o.s.context.support.ClassPathXmlApplicationContext.prepareRefresh:589 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6093dd95: startup date [Tue Feb 06 00:32:20 MSK 2018]; root of context hierarchy
+2018-02-06 00:32:21,286 INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316 - Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2018-02-06 00:32:22,190 INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316 - Loading XML bean definitions from class path resource [spring/spring-db.xml]
+2018-02-06 00:32:25,471 INFO  o.s.jdbc.datasource.DriverManagerDataSource.setDriverClassName:133 - Loaded JDBC driver: org.hsqldb.jdbcDriver
+2018-02-06 00:32:26,307 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory:354 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-06 00:32:26,491 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-06 00:32:26,964 INFO  org.hibernate.Version.logVersion:45 - HHH000412: Hibernate Core {5.2.12.Final}
+2018-02-06 00:32:26,964 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-02-06 00:32:27,306 INFO  org.hibernate.annotations.common.Version.<clinit>:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-06 00:32:31,705 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-02-06 00:32:34,601 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.5.Final
+2018-02-06 00:32:35,808 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:389 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-06 00:32:37,948 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-06 00:32:38,916 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:442 - Executing SQL script from class path resource [db/init_db_hsqldb.sql]
+2018-02-06 00:32:38,932 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/init_db_hsqldb.sql] in 16 ms.
+2018-02-06 00:32:38,932 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:442 - Executing SQL script from class path resource [db/populateDB.sql]
+2018-02-06 00:32:38,952 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/populateDB.sql] in 20 ms.
+2018-02-06 00:32:39,248 INFO  o.s.context.support.ClassPathXmlApplicationContext.prepareRefresh:589 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6093dd95: startup date [Tue Feb 06 00:32:39 MSK 2018]; root of context hierarchy
+2018-02-06 00:32:39,252 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:565 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-06 00:32:39,256 INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316 - Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2018-02-06 00:32:39,324 INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316 - Loading XML bean definitions from class path resource [spring/spring-db.xml]
+2018-02-06 00:32:39,808 INFO  o.s.jdbc.datasource.DriverManagerDataSource.setDriverClassName:133 - Loaded JDBC driver: org.hsqldb.jdbcDriver
+2018-02-06 00:32:41,200 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory:354 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-06 00:32:41,200 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-06 00:32:41,228 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-02-06 00:32:41,320 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:389 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-06 00:32:41,596 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-06 00:32:41,788 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:442 - Executing SQL script from class path resource [db/init_db_hsqldb.sql]
+2018-02-06 00:32:41,828 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/init_db_hsqldb.sql] in 40 ms.
+2018-02-06 00:32:41,828 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:442 - Executing SQL script from class path resource [db/populateDB.sql]
+2018-02-06 00:32:41,836 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/populateDB.sql] in 8 ms.
+2018-02-07 23:55:17,551 INFO  o.s.context.support.ClassPathXmlApplicationContext.prepareRefresh:589 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6093dd95: startup date [Wed Feb 07 23:55:17 MSK 2018]; root of context hierarchy
+2018-02-07 23:55:17,989 INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316 - Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2018-02-07 23:55:19,359 INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316 - Loading XML bean definitions from class path resource [spring/spring-db.xml]
+2018-02-07 23:55:22,938 INFO  o.s.jdbc.datasource.DriverManagerDataSource.setDriverClassName:133 - Loaded JDBC driver: org.hsqldb.jdbcDriver
+2018-02-07 23:55:23,878 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory:354 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-07 23:55:23,909 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-07 23:55:24,025 INFO  org.hibernate.Version.logVersion:45 - HHH000412: Hibernate Core {5.2.12.Final}
+2018-02-07 23:55:24,025 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-02-07 23:55:24,206 INFO  org.hibernate.annotations.common.Version.<clinit>:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-07 23:55:26,031 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-02-07 23:55:27,763 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.5.Final
+2018-02-07 23:55:28,213 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:389 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-07 23:55:29,067 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-07 23:55:29,494 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:442 - Executing SQL script from class path resource [db/init_db_hsqldb.sql]
+2018-02-07 23:55:29,541 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/init_db_hsqldb.sql] in 47 ms.
+2018-02-07 23:55:29,541 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:442 - Executing SQL script from class path resource [db/populateDB.sql]
+2018-02-07 23:55:29,580 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/populateDB.sql] in 39 ms.
+2018-02-07 23:55:29,690 INFO  o.s.context.support.ClassPathXmlApplicationContext.prepareRefresh:589 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6093dd95: startup date [Wed Feb 07 23:55:29 MSK 2018]; root of context hierarchy
+2018-02-07 23:55:29,693 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:565 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-07 23:55:29,695 INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316 - Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2018-02-07 23:55:29,728 INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316 - Loading XML bean definitions from class path resource [spring/spring-db.xml]
+2018-02-07 23:55:29,904 INFO  o.s.jdbc.datasource.DriverManagerDataSource.setDriverClassName:133 - Loaded JDBC driver: org.hsqldb.jdbcDriver
+2018-02-07 23:55:30,542 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory:354 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-07 23:55:30,542 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-07 23:55:30,566 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-02-07 23:55:30,606 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:389 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-07 23:55:30,720 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-07 23:55:30,828 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:442 - Executing SQL script from class path resource [db/init_db_hsqldb.sql]
+2018-02-07 23:55:30,843 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/init_db_hsqldb.sql] in 15 ms.
+2018-02-07 23:55:30,859 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:442 - Executing SQL script from class path resource [db/populateDB.sql]
+2018-02-07 23:55:30,859 INFO  o.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript:508 - Executed SQL script from class path resource [db/populateDB.sql] in 0 ms.
