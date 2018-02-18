@@ -1,7 +1,6 @@
 package project.model;
 
-import org.hibernate.Hibernate;
-import org.springframework.data.domain.Persistable;
+import project.HashId;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -10,7 +9,7 @@ import java.util.Objects;
 
 @Access(AccessType.FIELD)
 
-public abstract class AbstractBaseEntity implements Persistable<Long> {
+public abstract class AbstractBaseEntity implements HashId {
 
     public static final int START_SEQ = 100000;
 
@@ -19,7 +18,7 @@ public abstract class AbstractBaseEntity implements Persistable<Long> {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "global_seq")
     protected Long id;
 
-    public AbstractBaseEntity() {
+    protected AbstractBaseEntity() {
     }
 
     protected AbstractBaseEntity(Long id) {
@@ -31,12 +30,9 @@ public abstract class AbstractBaseEntity implements Persistable<Long> {
         return id;
     }
 
-    public void setId(long id) {
+    @Override
+    public void setId(Long id) {
         this.id = id;
-    }
-
-    public boolean isNew() {
-        return (this.id == null);
     }
 
     @Override
@@ -46,18 +42,15 @@ public abstract class AbstractBaseEntity implements Persistable<Long> {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || !getClass().equals(Hibernate.getClass(o))) {
-            return false;
-        }
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         AbstractBaseEntity that = (AbstractBaseEntity) o;
-        return id != null && id.equals(that.id);
+        return Objects.equals(id, that.id);
     }
 
     @Override
     public int hashCode() {
+
         return Objects.hash(id);
     }
 }
