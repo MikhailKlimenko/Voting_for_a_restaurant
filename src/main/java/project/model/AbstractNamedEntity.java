@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
+import java.math.BigInteger;
 
 @MappedSuperclass
 public abstract class AbstractNamedEntity extends AbstractBaseEntity {
@@ -16,7 +17,7 @@ public abstract class AbstractNamedEntity extends AbstractBaseEntity {
     public AbstractNamedEntity() {
     }
 
-    public AbstractNamedEntity(Integer id, String name) {
+    public AbstractNamedEntity(Long id, String name) {
         super(id);
         this.name = name;
     }

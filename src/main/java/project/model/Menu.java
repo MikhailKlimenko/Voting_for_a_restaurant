@@ -5,6 +5,7 @@ import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
+import java.math.BigInteger;
 
 
 @Entity
@@ -26,7 +27,7 @@ public class Menu extends AbstractBaseEntity {
 
     public Menu() {}
 
-    public Menu(Integer id, String description, Double price) {
+    public Menu(Long id, String description, Double price) {
         super(id);
         this.description = description;
         this.price = price;

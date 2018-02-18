@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -20,7 +21,7 @@ public class Restaurant extends AbstractBaseEntity {
     public Restaurant() {
     }
 
-    public Restaurant(Integer id, String description) {
+    public Restaurant(Long id, String description) {
         super(id);
         this.description = description;
     }

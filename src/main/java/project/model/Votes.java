@@ -9,10 +9,7 @@ import java.time.LocalTime;
 
 @Entity
 @Table
-public class Votes {
-
-    @Id
-    private BigInteger id;
+public class Votes extends AbstractBaseEntity{
 
     @Column(name = "datetime", nullable = false)
     @NotNull
@@ -30,24 +27,12 @@ public class Votes {
     public Votes() {
     }
 
-    public Votes(LocalDateTime dateTime, Restaurant restaurant) {
-        this(null, dateTime, restaurant);
-    }
-
-    public Votes(BigInteger id, LocalDateTime dateTime, Restaurant restaurant) {
-        this.id = id;
+    public Votes(Long id, LocalDateTime dateTime, Restaurant restaurant) {
+        super(id);
         this.localDateTime = dateTime;
         this.restaurant = restaurant;
-
     }
 
-    public BigInteger getId() {
-        return id;
-    }
-
-    public void setId(BigInteger id) {
-        this.id = id;
-    }
 
     public LocalDateTime getDateTime() {
         return localDateTime;
